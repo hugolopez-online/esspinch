@@ -1,42 +1,64 @@
 /* === GLOBAL STYLES ===*/
 
-/* == checklist == */
+/* == customization checklist == */
 
-/* [ ] color pallete */
+/* [ ] colors */
+/* [ ] radius */
+/* [ ] space */
 
-/* == root values and variables == */
+/* === root values and variables === */
 
 :root {
-    --primary-main: rgba(10, 100, 110, 1);
-    --primary-variant: rgba(5, 95, 105, 1);
-    --primary-emphasis: rgba(0, 65, 75, 1);
-    --secondary-main: rgba(115, 115, 115, 1);
-    --secondary-variant: rgba(110, 110, 110, 1);
-    --secondary-emphasis: rgba(95, 95, 95, 1);
-    --light-main: rgba(250, 255, 255, 1);
-    --light-variant: rgba(245, 250, 250, 1);
-    --light-emphasis: rgba(230, 235, 235, 1);
-    --dark-main: rgb(3, 30, 30);
-    --dark-variant: rgb(0, 25, 25);
-    --dark-emphasis: rgb(0, 10, 10);
-    --complementary-main: rgba(245, 155, 145, 1);
-    --complementary-variant: rgba(240, 150, 140, 1);
-    --complementary-emphasis: rgba(225, 135, 125, 1);
-    --accent-main: rgba(60, 20, 115, 1);
-    --accent-variant: rgba(55, 15, 110, 1);
-    --accent-emphasis: rgba(40, 0, 95, 1);
-    --warning-main: rgba(235, 145, 15, 1);
-    --warning-variant: rgba(230, 140, 10, 1);
-    --warning-emphasis: rgba(215, 125, 0, 1);
-    --danger-main: rgba(180, 25, 15, 1);
-    --danger-variant: rgba(175, 20, 10, 1);
-    --danger-emphasis: rgba(160, 5, 0, 1);
-    --transparent-main: rgba(250, 255, 255, 0);
-    --transparent-variant: rgba(245, 250, 250, 0);
-    --transparent-emphasis: rgba(230, 235, 235, 0);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.3s;
 }
 
+/* colors */
+
 :root {
+    --primary-main: rgb(44, 0, 94);
+    --primary-variant: color-mix(in srgb, var(--primary-main), #000515 10%);
+    --primary-emphasis: color-mix(in srgb, var(--primary-main), #000515 45%);
+    --secondary-main: color-mix(in srgb, var(--primary-main), #8888aa 80%);
+    --secondary-variant: color-mix(in srgb, var(--secondary-main), #000515 10%);
+    --secondary-emphasis: color-mix(
+        in srgb,
+        var(--secondary-main),
+        #000515 45%
+    );
+    --light-main: color-mix(in srgb, var(--primary-main), #fafaff 100%);
+    --light-variant: color-mix(in srgb, var(--light-main), #000515 10%);
+    --light-emphasis: color-mix(in srgb, var(--light-main), #000515 45%);
+    --dark-main: color-mix(in srgb, var(--primary-main), #000515 85%);
+    --dark-variant: color-mix(in srgb, var(--dark-main), #000010 30%);
+    --dark-emphasis: color-mix(in srgb, var(--dark-main), #000010 100%);
+    --complementary-main: rgb(255, 118, 118);
+    --complementary-variant: color-mix(
+        in srgb,
+        var(--complementary-main),
+        #000515 5%
+    );
+    --complementary-emphasis: color-mix(
+        in srgb,
+        var(--complementary-main),
+        #000515 30%
+    );
+    --accent-main: rgba(60, 20, 115, 1);
+    --accent-variant: color-mix(in srgb, var(--accent-main), #000515 10%);
+    --accent-emphasis: color-mix(in srgb, var(--accent-main), #000515 60%);
+    --warning-main: rgba(235, 145, 15, 1);
+    --warning-variant: color-mix(in srgb, var(--warning-main), #000515 5%);
+    --warning-emphasis: color-mix(in srgb, var(--warning-main), #000515 40%);
+    --danger-main: rgba(180, 25, 15, 1);
+    --danger-variant: color-mix(in srgb, var(--danger-main), #000515 10%);
+    --danger-emphasis: color-mix(in srgb, var(--danger-main), #000515 60%);
+}
+
+/* radius */
+
+:root {
+    --radius-0: 0;
     --radius-1: 0.2rem;
     --radius-2: 0.4rem;
     --radius-3: 0.6rem;
@@ -47,10 +69,20 @@
     --radius-8: 2.5rem;
 }
 
+/* space */
+
 :root {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    transition-duration: 0.3s;
+    --space-0: 0;
+    --space-1: 1px;
+    --space-2: 2px;
+    --space-3: 3px;
+    --space-4: 4px;
+    --space-5: 0.5rem;
+    --space-6: 0.75rem;
+    --space-7: 1rem;
+    --space-8: 1.5rem;
+    --space-9: 2rem;
+    --space-10: 2.5rem;
 }
 
 /* == box sizing == */
@@ -70,7 +102,7 @@ body {
 }
 
 .row {
-    padding: 1rem;
+    padding: var(--space-6);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -244,15 +276,15 @@ body {
 }
 
 .border {
-    border: 1px solid;
+    border: var(--space-1) solid !important;
 }
 
 .border-thicker {
-    border: 2px solid;
+    border: var(--space-2) solid !important;
 }
 
 .border-thickest {
-    border: 3px solid;
+    border: var(--space-3) solid !important;
 }
 
 .text-bg-primary {
@@ -302,7 +334,7 @@ h4,
 h5,
 h6 {
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-7);
     width: 100%;
 }
 
@@ -332,25 +364,16 @@ h6 {
 
 p {
     width: 100%;
-    margin-bottom: 0.75rem;
-}
-
-button {
-    background-color: var(--transparent-main);
-    border: 0 solid var(--transparent-emphasis);
-    border-radius: var(--radius-3);
-    padding: 0.75em;
-    cursor: pointer;
-    display: block;
+    margin-bottom: var(--space-6);
 }
 
 .skeu-primary {
-    box-shadow: 0 5px var(--primary-emphasis);
+    box-shadow: 0 var(--space-4) var(--primary-emphasis);
 }
 
 .skeu-primary:active {
-    box-shadow: 0 3px var(--primary-emphasis);
-    transform: translateY(2px);
+    box-shadow: 0 var(--space-3) var(--primary-emphasis);
+    transform: translateY(calc(var(--space-4) - var(--space-3)));
 }
 
 .skeu-secondary {
@@ -416,9 +439,18 @@ button {
     transform: translateY(2px);
 }
 
+.btn {
+    background-color: var(--transparent-main);
+    border: 0;
+    border-radius: var(--radius-3);
+    padding: 0.75em;
+    cursor: pointer;
+    display: block;
+}
+
 .btn-primary {
     background-color: var(--primary-main);
-    border-color: var(--primary-emphasis);
+    border-color: var(--primary-emphasis) !important;
     color: var(--light-main);
 }
 
@@ -428,12 +460,12 @@ button {
 
 .btn-primary:active {
     background-color: var(--primary-variant);
-    border-color: var(--primary-emphasis);
+    border-color: var(--primary-emphasis) !important;
 }
 
 .btn-secondary {
     background-color: var(--secondary-main);
-    border-color: var(--secondary-emphasis);
+    border-color: var(--secondary-emphasis) !important;
     color: var(--light-main);
 }
 
@@ -443,12 +475,12 @@ button {
 
 .btn-secondary:active {
     background-color: var(--secondary-variant);
-    border-color: var(--secondary-emphasis);
+    border-color: var(--secondary-emphasis) !important;
 }
 
 .btn-light {
     background-color: var(--light-main);
-    border-color: var(--light-emphasis);
+    border-color: var(--light-emphasis) !important;
     color: var(--dark-main);
 }
 
@@ -458,12 +490,12 @@ button {
 
 .btn-light:active {
     background-color: var(--light-variant);
-    border-color: var(--light-emphasis);
+    border-color: var(--light-emphasis) !important;
 }
 
 .btn-dark {
     background-color: var(--dark-main);
-    border-color: var(--dark-emphasis);
+    border-color: var(--dark-emphasis) !important;
     color: var(--light-main);
 }
 
@@ -473,12 +505,12 @@ button {
 
 .btn-dark:active {
     background-color: var(--dark-variant);
-    border-color: var(--dark-emphasis);
+    border-color: var(--dark-emphasis) !important;
 }
 
 .btn-complementary {
     background-color: var(--complementary-main);
-    border-color: var(--complementary-emphasis);
+    border-color: var(--complementary-emphasis) !important;
     color: var(--dark-main);
 }
 
@@ -488,12 +520,12 @@ button {
 
 .btn-complementary:active {
     background-color: var(--complementary-variant);
-    border-color: var(--complementary-emphasis);
+    border-color: var(--complementary-emphasis) !important;
 }
 
 .btn-accent {
     background-color: var(--accent-main);
-    border-color: var(--accent-emphasis);
+    border-color: var(--accent-emphasis) !important;
     color: var(--light-main);
 }
 
@@ -503,12 +535,12 @@ button {
 
 .btn-accent:active {
     background-color: var(--accent-variant);
-    border-color: var(--accent-emphasis);
+    border-color: var(--accent-emphasis) !important;
 }
 
 .btn-warning {
     background-color: var(--warning-main);
-    border-color: var(--warning-emphasis);
+    border-color: var(--warning-emphasis) !important;
     color: var(--dark-main);
 }
 
@@ -518,12 +550,12 @@ button {
 
 .btn-warning:active {
     background-color: var(--warning-variant);
-    border-color: var(--warning-emphasis);
+    border-color: var(--warning-emphasis) !important;
 }
 
 .btn-danger {
     background-color: var(--danger-main);
-    border-color: var(--danger-emphasis);
+    border-color: var(--danger-emphasis) !important;
     color: var(--light-main);
 }
 
@@ -533,5 +565,5 @@ button {
 
 .btn-danger:active {
     background-color: var(--danger-variant);
-    border-color: var(--danger-emphasis);
+    border-color: var(--danger-emphasis) !important;
 }
