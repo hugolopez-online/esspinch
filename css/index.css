@@ -1,0 +1,117 @@
+/* === GLOBAL STYLES ===*/
+
+/* == checklist == */
+
+/* [ ] color pallete */
+
+/* == variables (colors) == */
+
+:root {
+    --primary-main: rgba(10, 100, 110, 1);
+    --secondary-main: rgba(115, 115, 115, 1);
+    --light-main: rgb(240, 255, 255);
+    --dark-main: rgb(3, 30, 30);
+    --complementary-main: rgba(245, 155, 145, 1);
+    --accent-main: rgba(60, 20, 115, 1);
+    --warning-main: rgba(235, 145, 15, 1);
+    --danger-main: rgba(180, 25, 15, 1);
+}
+
+:root {
+    font-size: 16px;
+}
+
+/* == box sizing == */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    flex-shrink: 1;
+}
+
+.col-1 {
+    width: 6.25%;
+}
+
+.col-2 {
+    width: 12.5%;
+}
+
+.col-3 {
+    width: 18.75%;
+}
+
+.col-4 {
+    width: 25%;
+}
+
+.col-5 {
+    width: 31.25%;
+}
+
+.col-6 {
+    width: 37.5%;
+}
+
+.col-7 {
+    width: 43.75%;
+}
+
+.col-8 {
+    width: 50%;
+}
+
+.col-9 {
+    width: 56.25%;
+}
+
+.col-10 {
+    width: 62.5%;
+}
+
+.col-11 {
+    width: 68.75%;
+}
+
+.col-12 {
+    width: 75%;
+}
+
+.col-13 {
+    width: 81.25%;
+}
+
+.col-14 {
+    width: 87.5%;
+}
+
+.col-15 {
+    width: 93.75%;
+}
+
+.col-16 {
+    width: 100%;
+}
+
+.text-bg-primary {
+    background-color: var(--primary-main);
+    color: var(--light-main);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3rem;
+}
